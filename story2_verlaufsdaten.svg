@@ -1,0 +1,78 @@
+<svg width="780" height="300" viewBox="0 0 780 300" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+<title>Story 2: Verlaufsdaten speichern und visualisieren</title>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<rect width="780" height="300" fill="white"/>
+<text x="390" y="24" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Story 2: Verlaufsdaten speichern und visualisieren</text>
+
+<!-- Node-RED -->
+<circle cx="80" cy="100" r="28" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5"/>
+<text x="80" y="105" text-anchor="middle" font-size="20">⚙️</text>
+<text x="80" y="148" text-anchor="middle" font-size="10" fill="#412402">Node-RED</text>
+
+<line x1="110" y1="100" x2="166" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="138" y="88" text-anchor="middle" font-size="10" fill="#333">① empfängt</text>
+
+<rect x="168" y="78" width="90" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+<text x="213" y="96" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">MQTT</text>
+<text x="213" y="111" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">Nachricht</text>
+
+<line x1="258" y1="100" x2="314" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="286" y="88" text-anchor="middle" font-size="10" fill="#333">② speichert</text>
+
+<rect x="316" y="78" width="90" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+<text x="361" y="96" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">Temperatur-</text>
+<text x="361" y="111" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">wert</text>
+
+<line x1="406" y1="100" x2="462" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="434" y="88" text-anchor="middle" font-size="10" fill="#333">③ in</text>
+
+<rect x="464" y="78" width="90" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+<text x="509" y="96" text-anchor="middle" font-size="10" fill="#04342C" font-weight="bold">Datenbank</text>
+<text x="509" y="111" text-anchor="middle" font-size="10" fill="#04342C" font-weight="bold">(1 Woche)</text>
+
+<!-- Nutzer -->
+<circle cx="80" cy="220" r="28" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+<text x="80" y="225" text-anchor="middle" font-size="20">👤</text>
+<text x="80" y="268" text-anchor="middle" font-size="10" fill="#04342C">Nutzer</text>
+
+<line x1="110" y1="220" x2="166" y2="220" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="138" y="208" text-anchor="middle" font-size="10" fill="#333">④ öffnet</text>
+
+<rect x="168" y="198" width="90" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+<text x="213" y="216" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">Web</text>
+<text x="213" y="231" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">Dashboard</text>
+
+<line x1="258" y1="220" x2="314" y2="220" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="286" y="208" text-anchor="middle" font-size="10" fill="#333">⑤ liest</text>
+
+<rect x="316" y="198" width="90" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+<text x="361" y="216" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">Verlaufs-</text>
+<text x="361" y="231" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">daten</text>
+
+<line x1="406" y1="220" x2="462" y2="220" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="434" y="208" text-anchor="middle" font-size="10" fill="#333">⑥ aus</text>
+
+<rect x="464" y="198" width="90" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+<text x="509" y="216" text-anchor="middle" font-size="10" fill="#04342C" font-weight="bold">Datenbank</text>
+<text x="509" y="231" text-anchor="middle" font-size="10" fill="#04342C" font-weight="bold">(1 Woche)</text>
+
+<line x1="554" y1="220" x2="630" y2="220" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="592" y="208" text-anchor="middle" font-size="10" fill="#333">⑦ visualisiert</text>
+
+<rect x="632" y="198" width="110" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+<text x="687" y="216" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">Temperatur-</text>
+<text x="687" y="231" text-anchor="middle" font-size="10" fill="#26215C" font-weight="bold">verlauf</text>
+
+<!-- Legend -->
+<circle cx="30" cy="290" r="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="1"/>
+<text x="44" y="294" font-size="9" fill="#333">Akteur</text>
+<rect x="90" y="282" width="20" height="14" rx="3" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="116" y="294" font-size="9" fill="#333">Objekt</text>
+<line x1="160" y1="289" x2="185" y2="289" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="192" y="294" font-size="9" fill="#333">Aktivität</text>
+</svg>
