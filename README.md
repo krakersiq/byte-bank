@@ -1,2 +1,2 @@
 # Iot-Projekt 
-## byte-BANK - Beyza, Antonia, Nelly, Ka
+## byte-BANK - Beyza, Antonia, Nelli, Ka
