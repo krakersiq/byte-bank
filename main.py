@@ -28,10 +28,10 @@ from umqtt.simple import MQTTClient
 
 # MQTT Server Parameters
 MQTT_CLIENT_ID = "micropython-weather-demo"
-MQTT_BROKER    = "broker.mqttdashboard.com"
+MQTT_BROKER    = "broker.f4.htw-berlin.de"
 MQTT_USER      = ""
 MQTT_PASSWORD  = ""
-MQTT_TOPIC     = "wokwi-weather"
+MQTT_TOPIC     = "f4/bis/byte-bank"
 
 
 sensor = dht.DHT22(Pin(4))
