@@ -46,10 +46,15 @@ print("Connected!")
 prev_weather = ""
 while True:
   print("Measuring weather conditions... ", end="")
-  sensor.measure() 
+  sensor.measure()
+  
+  t = time.localtime()
+  time_str = "{:02d}:{:02d}:{:02d}".format(t[3],t[4],t[5])
+  
   message = ujson.dumps({
     "temp": sensor.temperature(),
     "humidity": sensor.humidity(),
+    "time": time_str
   })
   if message != prev_weather:
     print("Updated!")
