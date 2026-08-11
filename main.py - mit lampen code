@@ -6,7 +6,7 @@ from umqtt.simple import MQTTClient
 
 # --- 1. PIN-KONFIGURATION ---
 led_rot = Pin(14, Pin.OUT)     # D14 für Rot
-led_gruen = Pin(12, Pin.OUT)   # D12 für Grün
+led_gruen = Pin(18, Pin.OUT)   # D12 für Grün
 sensor = dht.DHT22(Pin(4))     # D4 für den DHT22 Temperatur-Sensor
 
 # MQTT Server Parameters
@@ -39,13 +39,13 @@ while True:
         led_gruen.value(1)    # Grün AN
 
     # Uhrzeit formatieren
-    t = time.localtime()
-    time_str = "{:02d}:{:02d}:{:02d}".format(t[3], t[4], t[5])
+  #  t = time.localtime()
+   # time_str = "{:02d}:{:02d}:{:02d}".format(t[3], t[4], t[5])
     
     message = ujson.dumps({
         "temp": temp,
         "humidity": humidity,
-        "time": time_str
+       # "time": time_str
     })
 
     if message != prev_weather:
@@ -57,8 +57,6 @@ while True:
         print("No change")
 
     time.sleep(1)
-
-
 
 _______________________________________________________________________________________________
 #ALT - falsche PIN ZAHL
