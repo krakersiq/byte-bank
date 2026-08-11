@@ -61,7 +61,7 @@ while True:
 
 
 _______________________________________________________________________________________________
-#ALT
+#ALT - falsche PIN ZAHL
 
 import time
 from machine import Pin
