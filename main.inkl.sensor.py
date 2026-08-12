@@ -46,7 +46,7 @@ while True:
     quality = water_pin.read() #WQ
 
     # --- 2. LAMPEN STEUERN (> 30 Grad = Rot, sonst Grün) ---
-    if temp > 30:
+    if temp > 30 or moisture < 1000 or moisture > 3000: # rot, wenn Temp. über 30 Grad oder Bodenfeuchte außerhalb des Bereichs 1000 und 3000
         led_rot.value(1)      # Rot AN
         led_gruen.value(0)    # Grün AUS
     else:
@@ -75,5 +75,6 @@ while True:
 
     time.sleep(1)
    
+
 
    
