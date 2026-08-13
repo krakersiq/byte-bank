@@ -65,10 +65,12 @@ while True:
         led_rot.value(1 if blink_state else 0)
         led_gruen.value(0)
 
-    elif dry or wet:  # trocken oder zu nass → rote Lampe dauerhaft an
+    elif dry or wet:  # zu trocken oder zu nass → rote Lampe dauerhaft an
 
         led_rot.value(1)
         led_gruen.value(0)
+        
+        
 
         # Alte Version
         # temp > 30 or moisture < 1000 or moisture > 2600: # rot, wenn Temp. über 30 Grad oder Bodenfeuchte außerhalb des Bereichs 1000 und 3000
@@ -106,3 +108,5 @@ while True:
         print("No change")
 
     time.sleep(1)
+
+
