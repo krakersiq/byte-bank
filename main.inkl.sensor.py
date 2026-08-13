@@ -1,5 +1,4 @@
 import time
-from machine import Pin
 from machine import Pin, ADC  #Moisture Sensor(MS)
 import dht
 import ujson
@@ -8,7 +7,7 @@ from umqtt.simple import MQTTClient
 # --- 1. PIN-KONFIGURATION ---
 
 led_rot = Pin(14, Pin.OUT)     # D14 für Rot
-led_gruen = Pin(18, Pin.OUT)   # D12 für Grün
+led_gruen = Pin(18, Pin.OUT)   # D18 für Grün
 sensor = dht.DHT22(Pin(4))     # D4 für den DHT22 Temperatur-Sensor
 
 #Feuchtigkeitssensor (MS)
@@ -89,10 +88,10 @@ while True:
         print("Updated!")
 
         message = ujson.dumps({
-            "temp": temp,
-            "humidity": humidity,
-            "moisture": moisture, #MS
-            "quality": quality    #TDS
+            "temp": temp,              #Temperatur
+            "humidity": humidity,      #Luftfeuchtigkeit
+            "moisture": moisture, #MS  #Bodenfeuchtigkeit
+            "quality": quality    #TDS #Wasserqualität
         })
 
         print("Reporting to MQTT topic {}: {}".format(MQTT_TOPIC, message))
@@ -107,7 +106,3 @@ while True:
         print("No change")
 
     time.sleep(1)
-
-
-
-   
