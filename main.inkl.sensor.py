@@ -69,13 +69,6 @@ while True:
 
         led_rot.value(1)
         led_gruen.value(0)
-        
-        
-
-        # Alte Version
-        # temp > 30 or moisture < 1000 or moisture > 2600: # rot, wenn Temp. über 30 Grad oder Bodenfeuchte außerhalb des Bereichs 1000 und 3000
-        # led_rot.value(1)      # Rot AN
-        # led_gruen.value(0)    # Grün AUS
 
     else:  # alles normal → grüne Lampe an
 
